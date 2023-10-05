@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="style.css" />
+
     <title>World Clock</title>
   </head>
   <body>
@@ -16,19 +17,6 @@
       <option value="Australia/Sydney">Sydney 🇦🇺</option>
     </select>
 
-    <script>
-      function showSelectedCity(event) {
-        if (event.target.value.length > 0) {
-          let currentTime = moment()
-            .tz(event.target.value)
-            .format("dddd, MMMM D, YYYY h:mm A");
-
-          alert(`It is ${currentTime} in ${event.target.value}`);
-        }
-      }
-      let citySelect = document.querySelector("#city");
-
-      citySelect.addEventListener("change", showSelectedCity);
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
