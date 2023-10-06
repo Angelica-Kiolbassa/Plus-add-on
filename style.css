@@ -33,15 +33,7 @@ a {
   color: #00e8b9;
 }
 
-.cityOne {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-
-.cityTwo {
+#city-one {
   display: flex;
   justify-content: space-between;
   margin: 20px;
@@ -62,6 +54,14 @@ a {
   font-size: 16px;
   line-height: 36px;
   vertical-align: middle;
+}
+
+#city-two {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 #container-one {
