@@ -1,34 +1,52 @@
 body {
   text-align: center;
   background: #f9f7fe;
-  font-family: sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+h1 {
+  margin-bottom: 50px;
+  font-size: 45px;
 }
 
 h2 {
   margin: 0 0 5px;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 select {
   display: block;
   width: 100%;
   padding: 10px;
-}
-
-.container-one {
-  max-width: 600px;
-  margin: 0 auto;
-  background: white;
-  padding: 30px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  margin: 60px;
 }
 
-.city {
+a {
+  text-decoration: none;
+  color: #00e8b9;
+}
+
+.cityOne {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.cityTwo {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .date {
@@ -36,12 +54,33 @@ select {
 }
 
 .time {
-  font-size: 48px;
+  font-size: 35px;
   font-weight: bold;
 }
 
 .time small {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 36px;
   vertical-align: middle;
+}
+
+#container-one {
+  background: #cbf4ec;
+  box-shadow: 10px 10px 10px 2px rgba(0.2, 0, 0, 0.4);
+  border-radius: 10px;
+  margin: 40px;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 40px;
+}
+
+#container-two {
+  background: #d6b3ff;
+  color: #ffffff;
+  box-shadow: 10px 10px 10px 2px rgba(0.2, 0, 0, 0.4);
+  border-radius: 10px;
+  margin: 40px;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 40px;
 }
