@@ -6,7 +6,7 @@ let cityOneTimeElement = cityOneElement.querySelector(".time");
 let cityOneTime = moment().tz("America/Los_Angeles");
 
 cityOneDateElement.innerHTML = cityOneTime.format("MMMM Do YYYY");
-cityOneTimeElement.innerHTML = cityOneTime.format("h:mm:ss A");
+cityOneTimeElement.innerHTML = cityOneTime.format("h:mm [<small>]A[</small>]");
 
 // city two results
 let cityTwoElement = document.querySelector("#city-two");
@@ -16,7 +16,7 @@ let cityTwoTimeElement = cityTwoElement.querySelector(".time");
 let cityTwoTime = moment().tz("Asia/Tokyo");
 
 cityTwoDateElement.innerHTML = cityTwoTime.format("MMMM Do YYYY");
-cityTwoTimeElement.innerHTML = cityTwoTime.format("h:mm:ss A");
+cityTwoTimeElement.innerHTML = cityTwoTime.format("h:mm [<small>]A[</small>]");
 
 // city one update
 function updateCity(event) {
@@ -33,7 +33,7 @@ function updateCity(event) {
       <h2>${cityName}</h2>
       <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
     </div>
-    <div class="time">${cityTime.format("h:mm:ss A")}</div>
+    <div class="time" class="align-right">${cityTime.format("h:mm A")}</div>
   </div>
   `;
 }
@@ -56,7 +56,7 @@ function updateCityTwo(event) {
       <h2>${cityTwoName}</h2>
       <div class="date">${cityTwoTime.format("MMMM	Do YYYY")}</div>
     </div>
-    <div class="time">${cityTwoTime.format("h:mm:ss A")}</div>
+    <div class="time">${cityTwoTime.format("h:mm A")}</div>
   </div>
   `;
 }
