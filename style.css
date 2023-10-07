@@ -50,12 +50,6 @@ a {
   font-weight: bold;
 }
 
-.time small {
-  font-size: 16px;
-  line-height: 36px;
-  vertical-align: middle;
-}
-
 #city-two {
   display: flex;
   justify-content: space-between;
