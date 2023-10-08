@@ -13,10 +13,22 @@ let cityTwoElement = document.querySelector("#city-two");
 
 let cityTwoDateElement = cityTwoElement.querySelector(".date");
 let cityTwoTimeElement = cityTwoElement.querySelector(".time");
-let cityTwoTime = moment().tz("Asia/Tokyo");
+let cityTwoTime = moment().tz("Europe/London");
 
 cityTwoDateElement.innerHTML = cityTwoTime.format("MMMM Do YYYY");
 cityTwoTimeElement.innerHTML = cityTwoTime.format("h:mm [<small>]A[</small>]");
+
+// city three results
+let cityThreeElement = document.querySelector("#city-three");
+
+let cityThreeDateElement = cityThreeElement.querySelector(".date");
+let cityThreeTimeElement = cityThreeElement.querySelector(".time");
+let cityThreeTime = moment().tz("Asia/Seoul");
+
+cityThreeDateElement.innerHTML = cityThreeTime.format("MMMM Do YYYY");
+cityThreeTimeElement.innerHTML = cityThreeTime.format(
+  "h:mm [<small>]A[</small>]"
+);
 
 // city one update
 function updateCity(event) {
@@ -33,7 +45,9 @@ function updateCity(event) {
       <h2>${cityName}</h2>
       <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
     </div>
-    <div class="time" class="align-right">${cityTime.format("h:mm A")}</div>
+    <div class="time" class="align-right">${cityTime.format(
+      "h:mm"
+    )} <small>${cityTime.format("A")}</small></div>
   </div>
   `;
 }
@@ -56,10 +70,37 @@ function updateCityTwo(event) {
       <h2>${cityTwoName}</h2>
       <div class="date">${cityTwoTime.format("MMMM	Do YYYY")}</div>
     </div>
-    <div class="time">${cityTwoTime.format("h:mm A")}</div>
+    <div class="time">${cityTwoTime.format("h:mm")} <small>${cityTwoTime.format(
+    "A"
+  )}</small></div>
   </div>
   `;
 }
 
 let secondCitySelected = document.querySelector("#city-two-select");
 secondCitySelected.addEventListener("change", updateCityTwo);
+
+// city three update
+function updateCityThree(event) {
+  let cityThreeTimeZone = event.target.value;
+  if (cityThreeTimeZone === "current") {
+    cityThreeTimeZone = moment.tz.guess();
+  }
+  let cityThreeName = cityThreeTimeZone.replace("_", " ").split("/")[1];
+  let cityThreeTime = moment().tz(cityThreeTimeZone);
+  let thirdCityElement = document.querySelector("#city-three");
+  thirdCityElement.innerHTML = `
+  <div class="city" id"city-three">
+    <div>
+      <h2>${cityThreeName}</h2>
+      <div class="date">${cityThreeTime.format("MMMM	Do YYYY")}</div>
+    </div>
+    <div class="time">${cityThreeTime.format(
+      "h:mm"
+    )} <small>${cityThreeTime.format("A")}</small></div>
+  </div>
+  `;
+}
+
+let thirdCitySelected = document.querySelector("#city-three-select");
+thirdCitySelected.addEventListener("change", updateCityThree);
