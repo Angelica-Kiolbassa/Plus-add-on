@@ -1,6 +1,5 @@
 // city one results
 let cityOneElement = document.querySelector("#city-one");
-
 let cityOneDateElement = cityOneElement.querySelector(".date");
 let cityOneTimeElement = cityOneElement.querySelector(".time");
 let cityOneTime = moment().tz("America/Los_Angeles");
@@ -10,7 +9,6 @@ cityOneTimeElement.innerHTML = cityOneTime.format("h:mm [<small>]A[</small>]");
 
 // city two results
 let cityTwoElement = document.querySelector("#city-two");
-
 let cityTwoDateElement = cityTwoElement.querySelector(".date");
 let cityTwoTimeElement = cityTwoElement.querySelector(".time");
 let cityTwoTime = moment().tz("Europe/London");
@@ -20,7 +18,6 @@ cityTwoTimeElement.innerHTML = cityTwoTime.format("h:mm [<small>]A[</small>]");
 
 // city three results
 let cityThreeElement = document.querySelector("#city-three");
-
 let cityThreeDateElement = cityThreeElement.querySelector(".date");
 let cityThreeTimeElement = cityThreeElement.querySelector(".time");
 let cityThreeTime = moment().tz("Asia/Seoul");
